@@ -201,7 +201,7 @@
     position: relative;
     width: 20px;
     height: 20px;
-    background: url(../img/checkbox-bg.png) no-repeat;
+    background: url('../img/checkbox-bg.png') no-repeat;
     cursor: pointer;
 }
 #pop .address-form .blue-checkbox{

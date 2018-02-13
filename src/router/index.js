@@ -7,6 +7,7 @@ import Shop from '@/views/shop'
 import Item from '@/views/item'
 import Cart from '@/views/Cart'
 import Checkout from '@/views/checkout'
+
 export default new Router({
     mode: 'history',
     routes: [{

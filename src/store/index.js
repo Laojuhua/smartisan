@@ -6,6 +6,36 @@ Vue.use(Vuex)
 let store = new Vuex.Store({
     state: {
         carPanelData: [],
+        receiveInfo:[
+            {
+                "name": "王XX",
+                "phone": "13811111111",
+                "areaCode": "010",
+                "landLine": "64627856",
+                "provinceId": 110000,
+                "province": "北京市",
+                "cityId": 110100,
+                "city": "市辖区",
+                "countyId": 110106,
+                "county": "海淀区",
+                "add": "上地十街辉煌国际西6号楼319室",
+                "default": false
+            },
+            {
+                "name": "李小X",
+                "phone": "13822222212",
+                "areaCode": "010",
+                "landLine": "64627856",
+                "provinceId": 110000,
+                "province": "北京市",
+                "cityId": 110100,
+                "city": "市辖区",
+                "countyId": 110106,
+                "county": "海淀区",
+                "add": "上地十街辉煌国际东6号楼350室",
+                "default": true
+            }
+        ],
         maxOff: false,
         carShow: false,
         carTimer: null,
@@ -139,7 +169,7 @@ let store = new Vuex.Store({
                 goods.checked = !allChecked
             })
         },
-        delCheckedGoods(state){
+        delCheckedGoods(state){ //正序删除会将第二个顶上，错过这个导致删除出错，改用倒序删除Ok
             let i = state.carPanelData.length;
             while (i--) {
                 if(state.carPanelData[i].checked){
